@@ -1,0 +1,23 @@
+$tablet: 1040px;
+$mobile: 680px;
+
+:root {
+  --mobile: 680px;
+
+  --header-d-height: 70px;
+  --header-m-height: 50px;
+
+  --container-p: 10px;
+
+  --t-duration: 200ms;
+
+  --b-radius: 20px;
+
+  --font-primary: 'futuraPT';
+
+  --color-light: 0 0 100;       // #ffffff
+  --color-dark: 0 16 16;        // #2f2222
+  --color-accent: 231 65 62;    // #5d71dd
+  --color-accent-h: 231 58 64;  // #6c7dd8
+  --color-backgr: 0 0 98;       // #f9f9f9
+}

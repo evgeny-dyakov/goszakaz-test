@@ -1,0 +1,16 @@
+.sidebar {
+  width: 320px;
+
+  h2 {
+    font-family: var(--font-primary);
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+@media(max-width: $tablet) {
+  .sidebar {
+    width: auto;
+    margin: 0 0 80px;
+  }
+}

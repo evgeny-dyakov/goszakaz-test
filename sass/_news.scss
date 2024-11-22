@@ -1,0 +1,155 @@
+.news {
+  position: relative;
+  font-family: var(--font-primary);
+
+  h3, p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  h3 {
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 500;
+    transition: ease var(--t-duration);
+  }
+
+  p {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  &--white {
+
+    h3 {
+      color: hsl(var(--color-dark));
+    }
+
+    p {
+      color: hsl(var(--color-dark) / .4);
+    }
+  }
+
+  &--color {
+
+    .news__link {
+      background: hsl(var(--color-accent));
+    }
+  }
+
+  &--img {
+
+    .news__link {
+      background-color: hsl(var(--color-accent));
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &--color,
+  &--img {
+
+    h3 {
+      margin: 0;
+      color: hsl(var(--color-light));
+      -webkit-line-clamp: 6;
+    }
+
+    p {
+      display: none;
+    }
+
+    .news__link {
+      padding: 107px 30px 80px;
+    }
+
+    .news__date {
+      top: auto;
+      right: auto;
+      left: 30px;
+      bottom: 40px;
+      color: hsl(var(--color-light));
+    }
+
+    .news__secondary-btn {
+      left: 30px;
+    }
+  }
+}
+
+.news__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 107px 122px 52px 40px;
+  text-decoration: none;
+  background: hsl(var(--color-light));
+  border-radius: var(--b-radius);
+  transition: ease var(--t-duration);
+}
+
+@media(hover: hover) {
+  .news:hover {
+
+    .news__link {
+      box-shadow: 4px 8px 30px 0 hsla(231 87% 23% / 15%);
+    }
+  }
+
+  .news--color:hover .news__link {
+    background: hsl(var(--color-light));
+
+    h3 {
+      color: hsl(var(--color-dark));
+    }
+
+    p {
+      color: hsl(var(--color-dark) / .4);
+    }
+
+    .news__date {
+      color: hsla(var(--color-dark) / 0.4);
+    }
+  }
+
+  .news--img:hover .news__link {
+    box-shadow: 4px 8px 30px 0 hsla(231 87% 23% / 25%);
+  }
+}
+
+.news__date {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+
+.news__secondary-btn {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+@media(max-width: $mobile) {
+  .news {
+    height: 350px;
+
+    &--color,
+    &--img {
+
+      .news__link {
+        padding: 107px 40px 65px 30px;
+      }
+
+      h3 {
+        -webkit-line-clamp: 5;
+      }
+    }
+  }
+
+  .news__secondary-btn {
+    left: 30px;
+  }
+}

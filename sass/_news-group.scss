@@ -1,0 +1,170 @@
+.news-group {
+  display: grid;
+
+  &:not(:last-child) {
+    margin: 0 0 40px;
+  }
+
+  &--1 {
+    min-height: 235px;
+
+    .news--white {
+
+      h3 {
+        -webkit-line-clamp: 2;
+      }
+
+      p {
+        -webkit-line-clamp: 3;
+      }
+
+      .news__link {
+        padding: 107px 122px 52px 40px;
+      }
+    }
+  }
+
+  &--2 {
+    grid-template-columns: auto 320px;
+
+    .news--white {
+
+      h3 {
+        -webkit-line-clamp: 3;
+      }
+
+      p {
+        -webkit-line-clamp: 5;
+      }
+
+      .news__link {
+        padding: 107px 40px 52px;
+      }
+    }
+  }
+
+  &--3 {
+    grid-template-columns: 320px auto;
+    grid-template-rows: 180px;
+    grid-template-areas:
+      "image white-t"
+      "image white-b"
+    ;
+
+    .news {
+
+      &:nth-child(1) {
+        grid-area: image;
+      }
+
+      &:nth-child(2) {
+        grid-area: white-t;
+      }
+
+      &:nth-child(3) {
+        grid-area: white-b;
+      }
+    }
+
+    .news--white {
+
+      h3 {
+        margin: 0;
+        -webkit-line-clamp: 2;
+      }
+
+      p {
+        display: none;
+      }
+
+      .news__link {
+        padding: 87px 40px 31px;
+      }
+
+      .news__date {
+        top: 30px;
+      }
+
+      .news__secondary-btn {
+        top: 30px;
+      }
+    }
+  }
+
+  &--2,
+  &--3 {
+    gap: 40px;
+    height: 400px;
+  }
+}
+
+@media(max-width: $tablet) {
+  .news-group {
+
+    &--2,
+    &--3 {
+      column-gap: 20px;
+    }
+  }
+}
+
+@media(max-width: $mobile) {
+  .news-group {
+    display: block;
+
+    &--2,
+    &--3 {
+      height: auto;
+
+      .news:not(:last-child) {
+        margin: 0 0 40px;
+      }
+    }
+
+    &--1,
+    &--2,
+    &--3 {
+
+      .news--white {
+
+        h3 {
+          -webkit-line-clamp: 3;
+        }
+
+        p {
+          -webkit-line-clamp: 3;
+        }
+
+        .news__link {
+          padding: 107px 40px 40px 30px;
+        }
+      }
+    }
+
+    &--3 {
+
+      .news--white {
+
+        h3 {
+          margin: 0 0 20px;
+        }
+
+        p {
+          display: -webkit-box;
+        }
+
+        .news__secondary-btn {
+          top: 40px;
+        }
+
+        .news__date {
+          top: 40px;
+        }
+      }
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+}
