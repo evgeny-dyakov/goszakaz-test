@@ -9,35 +9,44 @@
 <body>
   <header class="header">
     <div class="container header__container">
-      <a class="logo">
+      <a class="logo" href="#main">
         <img src="./img/logo.svg" alt="company logo" loading="lazy">
       </a>
-      <div class="header__wrapper">
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li>
-              <a class="header__nav-link header__nav-link--active">Главная</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">О нас</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Контакты</a>
-            </li>
-            <li>
-              <a class="header__nav-link" href="#">Поиск</a>
-            </li>
-          </ul>
-        </nav>
-        <a class="header__phone-number" href="tel:+798788787">
-          <svg width="14" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m13.6189 10.7746-1.9537-1.95375c-.6978-.69777-1.884-.41863-2.16311.48843-.20933.62802-.90709.97692-1.53508.83732-1.39553-.34888-3.27949-2.16307-3.62838-3.62838-.20933-.62801.20933-1.32578.83732-1.53508.9071-.27911 1.1862-1.46531.48844-2.16307L3.71064.86633c-.55821-.48844-1.39553-.48844-1.88396 0L.50093 2.19208C-.82483 3.58761.64048 7.28576 3.91997 10.5653c3.2795 3.2795 6.97763 4.8146 8.37323 3.419l1.3257-1.3257c.4885-.5583.4885-1.3956 0-1.884Z" fill="#000"/></svg>
-          +7 (987) 887-87
-        </a>
+      <button class="header__burger" type="button">
+        <span class="visually-hidden">Открыть/закрыть меню</span>
+        <span class="header__burger-t-el"></span>
+        <span class="header__burger-c-el"></span>
+        <span class="header__burger-b-el"></span>
+      </button>
+      <div class="header__menu">
+        <div class="header__menu-inner">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li>
+                <a class="header__nav-link header__nav-link--active">Главная</a>
+              </li>
+              <li>
+                <a class="header__nav-link" href="#">О нас</a>
+              </li>
+              <li>
+                <a class="header__nav-link" href="#">Контакты</a>
+              </li>
+              <li>
+                <a class="header__nav-link" href="#">Поиск</a>
+              </li>
+            </ul>
+          </nav>
+          <a class="header__phone-number" href="tel:+798788787">
+            <svg width="14" height="15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m13.6189 10.7746-1.9537-1.95375c-.6978-.69777-1.884-.41863-2.16311.48843-.20933.62802-.90709.97692-1.53508.83732-1.39553-.34888-3.27949-2.16307-3.62838-3.62838-.20933-.62801.20933-1.32578.83732-1.53508.9071-.27911 1.1862-1.46531.48844-2.16307L3.71064.86633c-.55821-.48844-1.39553-.48844-1.88396 0L.50093 2.19208C-.82483 3.58761.64048 7.28576 3.91997 10.5653c3.2795 3.2795 6.97763 4.8146 8.37323 3.419l1.3257-1.3257c.4885-.5583.4885-1.3956 0-1.884Z" fill="#000"/></svg>
+            +7 (987) 887-87
+          </a>
+        </div>
       </div>
     </div>
+    <div class="header__overlay header__overlay--none header__overlay--transparent"></div>
   </header>
 
-  <main class="main">
+  <main class="main" id="main">
     <h1 class="visually-hidden">Главная</h1>
 
     <section class="banner">

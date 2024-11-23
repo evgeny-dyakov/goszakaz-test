@@ -120,6 +120,13 @@
   }
 }
 
+@media(hover: none) {
+
+  .news__link:active {
+    box-shadow: 4px 8px 30px 0 hsla(231 87% 23% / 15%);
+  }
+}
+
 .news__date {
   position: absolute;
   top: 40px;

@@ -3,9 +3,12 @@ $mobile: 680px;
 
 :root {
   --mobile: 680px;
+  --tablet: 1040px;
 
-  --header-d-height: 70px;
-  --header-m-height: 50px;
+  --header-desktop-height: 70px;
+  --header-mobile-height: 50px;
+
+  --menu-mobile-width: 300px;
 
   --container-p: 10px;
 
@@ -19,5 +22,5 @@ $mobile: 680px;
   --color-dark: 0 16 16;        // #2f2222
   --color-accent: 231 65 62;    // #5d71dd
   --color-accent-h: 231 58 64;  // #6c7dd8
-  --color-backgr: 0 0 98;       // #f9f9f9
+  --color-backgr: 0 0 95;       // #f9f9f9
 }
